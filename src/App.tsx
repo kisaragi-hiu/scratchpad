@@ -7,6 +7,7 @@ import {
   ArrowLeftIcon,
   ArrowRightIcon,
   ClipboardIcon,
+  InformationCircleIcon,
 } from "@heroicons/react/24/outline";
 
 import { Editor } from "./Editor.tsx";
@@ -38,6 +39,7 @@ function App() {
             <ArrowLeftIcon className={icon} />
             <ArrowRightIcon className={icon} />
             <ClipboardIcon className={icon} />
+            <InformationCircleIcon className={icon} />
           </div>
         </div>
       </header>
