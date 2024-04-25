@@ -21,13 +21,13 @@ function App() {
     setGreetMsg(await invoke("greet", { name }));
   }
 
-  const icon = "h-6 w-6 text-black";
+  const icon = "h-6 w-6 text-black dark:text-white";
   return (
     <div className="m-0 flex flex-col align-center h-full">
       <header
         className={clsx(
           "sticky top-0 z-50 w-full",
-          "border-b border-border/40",
+          "border-b border-gray-300 dark:border-gray-400/40",
           "bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60",
           "px-4 mb-2",
         )}
