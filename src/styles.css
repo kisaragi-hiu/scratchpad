@@ -2,14 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .text-primary-foreground {
+    @apply text-[#0f0f0f];
+    @apply dark:text-[#f6f6f6];
+  }
+  .bg-primary-background {
+    @apply bg-[#f6f6f6];
+    @apply dark:bg-[#09090B];
+  }
+}
+
+@layer components {
+  .iconButton {
+    @apply p-2;
+    @apply inline-flex items-center justify-center whitespace-nowrap;
+    @apply rounded-md ring-offset-green-400;
+    @apply transition-colors;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400 focus-visible:ring-offset-2;
+    @apply disabled:pointer-events-none disabled:opacity-50;
+    @apply text-primary-foreground hover:bg-gray-200 dark:hover:bg-gray-700;
+  }
+}
+
 :root {
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  @apply text-[#0f0f0f] bg-[#f6f6f6];
-  @apply dark:text-[#f6f6f6] dark:bg-[#09090B];
+  @apply text-primary-foreground bg-primary-background;
 }
 
 .prose {
@@ -22,26 +44,4 @@
   h1 {
     text-align: center;
   }
-}
-
-input,
-button {
-  outline: none;
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  @apply text-[#0f0f0f] bg-[#ffffff];
-  @apply dark:text-[#ffffff] dark:bg-[#0f0f0f98];
-  transition: border-color 0.25s;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-}
-
-button {
-  cursor: pointer;
-  @apply hover:border-[#396cd8];
-  @apply active:border-[#396cd8] active:bg-[#e8e8e8];
-  @apply dark:active:bg-[#0f0f0f69];
 }

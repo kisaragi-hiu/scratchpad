@@ -32,13 +32,23 @@ function App() {
         )}
       >
         <div className="flex h-14 max-w-screen-2xl items-center">
-          <div className="flex items-center gap-4 text-sm">
+          <div className="flex items-center gap-1 text-sm">
             <span>Future functionality</span>
-            <AdjustmentsHorizontalIcon className={icon} />
-            <ArrowLeftIcon className={icon} />
-            <ArrowRightIcon className={icon} />
-            <ClipboardIcon className={icon} />
-            <InformationCircleIcon className={icon} />
+            <button className="iconButton">
+              <AdjustmentsHorizontalIcon className={icon} />
+            </button>
+            <button className="iconButton">
+              <ArrowLeftIcon className={icon} />
+            </button>
+            <button className="iconButton">
+              <ArrowRightIcon className={icon} />
+            </button>
+            <button className="iconButton">
+              <ClipboardIcon className={icon} />
+            </button>
+            <button className="iconButton">
+              <InformationCircleIcon className={icon} />
+            </button>
           </div>
         </div>
       </header>
