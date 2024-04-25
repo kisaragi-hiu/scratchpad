@@ -7,6 +7,7 @@ const cjkFallback = [
 ];
 
 export default {
+    darkMode: "class",
     content: ["./src/**/*.tsx", "index.html"],
     theme: {
         fontFamily: {

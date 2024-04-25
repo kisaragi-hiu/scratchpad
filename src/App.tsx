@@ -15,7 +15,7 @@ function App() {
   }
 
   return (
-    <div className="m-0 p-4 flex flex-col align-center h-full">
+    <div className="m-0 px-4 flex flex-col align-center h-full">
       <div>Anything here </div>
       <div className="grow">
         <Editor />
