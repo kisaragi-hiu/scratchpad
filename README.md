@@ -1,7 +1,5 @@
-# Tauri + React + Typescript
+# Scratchpad
 
-This template should help get you started developing with Tauri, React and Typescript in Vite.
+Like Emacs `*scratch*` but with less distractions.
 
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+Like [Xenodium's `*scratch*`](https://apps.apple.com/gb/app/scratch/id1671420139) but for other platforms.
