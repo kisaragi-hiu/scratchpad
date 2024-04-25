@@ -18,7 +18,8 @@ export function Editor() {
     },
   };
 
-  const textClass = "text-sm";
+  /** Class that applies to both the contentEditable and the placeholder */
+  const textClass = "";
 
   return (
     <div className="relative h-full">
