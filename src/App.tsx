@@ -1,7 +1,6 @@
 import { useState } from "react";
 import clsx from "clsx";
 import { invoke } from "@tauri-apps/api/core";
-import "./App.css";
 import {
   AdjustmentsHorizontalIcon,
   ArrowLeftIcon,

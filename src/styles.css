@@ -9,7 +9,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   @apply text-[#0f0f0f] bg-[#f6f6f6];
-  @apply dark:text-[#f6f6f6] dark:bg-[#2f2f2f];
+  @apply dark:text-[#f6f6f6] dark:bg-[#09090B];
 }
 
 .prose {
