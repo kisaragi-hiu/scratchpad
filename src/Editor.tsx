@@ -8,14 +8,37 @@ import { RichTextPlugin } from "@lexical/react/LexicalRichTextPlugin";
 import { ContentEditable } from "@lexical/react/LexicalContentEditable";
 import { HistoryPlugin } from "@lexical/react/LexicalHistoryPlugin";
 import LexicalErrorBoundary from "@lexical/react/LexicalErrorBoundary";
+import ClickableLinkPlugin from "@lexical/react/LexicalClickableLinkPlugin";
+import { AutoLinkPlugin } from "@lexical/react/LexicalAutoLinkPlugin";
+import { AutoLinkNode } from "@lexical/link";
+const URL_MATCHER =
+  /((https?:\/\/(www\.)?)|(www\.))[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&\/\/=]*)/;
+
+const MATCHERS = [
+  (text: string) => {
+    const match = URL_MATCHER.exec(text);
+    if (match === null) {
+      return null;
+    }
+    const fullMatch = match[0];
+    return {
+      index: match.index,
+      length: fullMatch.length,
+      text: fullMatch,
+      url: fullMatch.startsWith("http") ? fullMatch : `https://${fullMatch}`,
+      // attributes: { rel: 'noreferrer', target: '_blank' }, // Optional link attributes
+    };
+  },
+];
 
 export function Editor() {
   const initialConfig = {
     namespace: "Scratchpad",
     theme: { ltr: "align-left", rtl: "align-right", paragraph: "" },
-    onError(err) {
+    onError(err: unknown) {
       console.error(err);
     },
+    nodes: [AutoLinkNode],
   };
 
   /** Class that applies to both the contentEditable and the placeholder */
@@ -33,6 +56,7 @@ export function Editor() {
                 textClass,
                 "disabled:cursor-not-allowed disabled:opacity-50",
                 "focus-visible:outline-none",
+                "prose",
               )}
             />
           }
@@ -49,7 +73,9 @@ export function Editor() {
           ErrorBoundary={LexicalErrorBoundary}
         />
         <HistoryPlugin />
+        <ClickableLinkPlugin />
         <AutoFocusPlugin />
+        <AutoLinkPlugin matchers={MATCHERS} />
       </LexicalComposer>
     </div>
   );
