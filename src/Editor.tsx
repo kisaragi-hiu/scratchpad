@@ -26,7 +26,7 @@ const MATCHERS = [
       length: fullMatch.length,
       text: fullMatch,
       url: fullMatch.startsWith("http") ? fullMatch : `https://${fullMatch}`,
-      // attributes: { rel: 'noreferrer', target: '_blank' }, // Optional link attributes
+      attributes: { rel: "noreferrer", target: "_blank" },
     };
   },
 ];
