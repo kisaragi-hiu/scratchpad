@@ -1,14 +1,15 @@
 {
   "productName": "scratchpad",
   "version": "0.0.0",
-  "identifier": "com.tauri.dev",
+  "identifier": "com.kisaragihiu.scratchpad",
   "build": {
     "beforeDevCommand": "bun run dev",
     "devUrl": "http://localhost:1420",
     "beforeBuildCommand": "bun run build",
     "frontendDist": "../dist"
   },
-  "app": {"windows": [
+  "app": {
+    "windows": [
       {
         "title": "scratchpad",
         "width": 800,
