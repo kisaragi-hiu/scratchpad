@@ -1,5 +1,3 @@
-import { $getRoot, $getSelection } from "lexical";
-import { useEffect } from "react";
 import clsx from "clsx";
 
 import { AutoFocusPlugin } from "@lexical/react/LexicalAutoFocusPlugin";

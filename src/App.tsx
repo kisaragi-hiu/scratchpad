@@ -1,6 +1,4 @@
-import { useState } from "react";
 import clsx from "clsx";
-import { invoke } from "@tauri-apps/api/core";
 import {
   AdjustmentsHorizontalIcon,
   ArrowLeftIcon,
@@ -12,14 +10,6 @@ import {
 import { Editor } from "./Editor.tsx";
 
 function App() {
-  const [greetMsg, setGreetMsg] = useState("");
-  const [name, setName] = useState("");
-
-  async function greet() {
-    // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
-    setGreetMsg(await invoke("greet", { name }));
-  }
-
   const icon = "h-6 w-6 text-black dark:text-white";
   return (
     <div className="m-0 flex flex-col align-center h-full">
