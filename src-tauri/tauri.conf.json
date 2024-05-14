@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "identifier": "com.kisaragihiu.scratchpad",
   "build": {
-    "beforeDevCommand": "bun run dev",
+    "beforeDevCommand": "make dev.src",
     "devUrl": "http://localhost:1420",
-    "beforeBuildCommand": "bun run build",
+    "beforeBuildCommand": "make build.src",
     "frontendDist": "../dist"
   },
   "app": {
